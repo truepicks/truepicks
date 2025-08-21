@@ -1,108 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TruePicks — Smart Guides, Honest Reviews</title>
-  <meta name="description" content="Smart guides and honest reviews: tutorials, tips, and hand‑picked recommendations to help you choose better.">
-  <meta name="theme-color" content="#0ea5e9">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/style.css">
-  <meta property="og:title" content="TruePicks — Smart Guides, Honest Reviews">
-  <meta property="og:description" content="Guides, tutorials, and affiliate-backed reviews you can trust.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://truepicks.github.io/">
-  <script defer src="/assets/script.js"></script>
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "WebSite", "name": "TruePicks", "url": "https://truepicks.github.io/", "potentialAction": {"@type": "SearchAction", "target": "https://truepicks.github.io/?q={{search_term_string}}", "query-input": "required name=search_term_string"}}
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TruePicks - Smart Picks for You</title>
+  <meta name="description" content="TruePicks brings you the best product recommendations, reviews, and informative articles all in one place.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .articles, .sidebar {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .article {
+      margin-bottom: 20px;
+    }
+    .article h2 {
+      margin: 0 0 10px;
+      color: #2c3e50;
+    }
+    .article p {
+      margin: 0;
+    }
+    .product {
+      margin-bottom: 15px;
+    }
+    .product h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+    .product a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .product a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/"><span class="logo">TP</span> <strong>TruePicks</strong></a>
-      <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/posts/example-article.html">Blog</a>
-        <a href="/reviews/example-review.html">Reviews</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="actions">
-        <button id="themeToggle" aria-label="Toggle theme">🌓</button>
-      </div>
-    </div>
+  <header>
+    <h1>TruePicks</h1>
+    <p>Smart Picks • Honest Reviews • Helpful Articles</p>
   </header>
 
-  <div class="disclosure" role="note">
-    <strong>Affiliate Disclosure:</strong> Some links may earn us a commission at no extra cost to you. We only recommend products we truly believe in.
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Blog</a>
+    <a href="#">Deals</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <!-- Articles Section -->
+    <div class="articles">
+      <div class="article">
+        <h2>Welcome to TruePicks</h2>
+        <p>Your one-stop hub for product recommendations, reviews, and helpful guides to make smarter choices online.</p>
+      </div>
+
+      <div class="article">
+        <h2>Latest Blog: 5 Gadgets That Can Save Your Time</h2>
+        <p>We researched trending gadgets that can actually improve your daily routine. Check out our top picks!</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <!-- Sidebar (Affiliate Products) -->
+    <aside class="sidebar">
+      <h2>Top Picks</h2>
+      <div class="product">
+        <h3>Wireless Earbuds</h3>
+        <a href="YOUR-AFFILIATE-LINK">Shop Now →</a>
+      </div>
+      <div class="product">
+        <h3>Smart Watch</h3>
+        <a href="YOUR-AFFILIATE-LINK">Shop Now →</a>
+      </div>
+      <div class="product">
+        <h3>Laptop Stand</h3>
+        <a href="YOUR-AFFILIATE-LINK">Shop Now →</a>
+      </div>
+    </aside>
   </div>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Smart Guides. Honest Reviews.</h1>
-        <p>Make better choices with no‑nonsense tutorials and carefully researched recommendations.</p>
-        <form id="siteSearch" role="search" class="search">
-          <input id="searchInput" name="q" type="search" placeholder="Search articles & reviews…" aria-label="Search">
-          <button type="submit">Search</button>
-        </form>
-        <div class="tags">
-          <a href="#" class="tag">Tech</a>
-          <a href="#" class="tag">Lifestyle</a>
-          <a href="#" class="tag">Health</a>
-          <a href="#" class="tag">Money</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid two-col">
-      <article class="card xl">
-        <a class="card-cover" href="/reviews/example-review.html" aria-label="Read our smartphone picks"></a>
-        <div class="card-body">
-          <h2 class="card-title">Best Smartphones Under 50,000 PKR (2025)</h2>
-          <p class="muted">Our ranked picks after 40+ hours of testing.</p>
-          <a class="btn" href="/reviews/example-review.html">Read Review</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <a class="card-cover" href="/posts/example-article.html" aria-label="Read weight gain guide"></a>
-        <div class="card-body">
-          <h3 class="card-title">How to Gain Weight Safely: A 30‑Day Plan</h3>
-          <p class="muted">Science‑backed tips, meal ideas, and mistakes to avoid.</p>
-          <a class="btn ghost" href="/posts/example-article.html">Read Article</a>
-        </div>
-      </article>
-    </section>
-
-    <section>
-      <h2>Latest Posts</h2>
-      <div id="results" class="grid three-col">
-        <!-- Client-side cards will be injected by script.js from the manifest below -->
-      </div>
-      <script id="content-manifest" type="application/json">
-      [{"type": "article", "title": "How to Gain Weight Safely: A 30‑Day Plan", "url": "/posts/example-article.html", "excerpt": "A practical, doctor-friendly approach to add healthy weight without sugar-heavy shortcuts.", "tags": ["Health", "Nutrition"]}, {"type": "review", "title": "Best Smartphones Under 50,000 PKR (2025)", "url": "/reviews/example-review.html", "excerpt": "Top picks ranked by performance, cameras, battery, and value.", "tags": ["Tech", "Phones", "Deals"]}]
-      </script>
-    </section>
-
-    <section id="about" class="prose">
-      <h2>About TruePicks</h2>
-      <p>TruePicks helps you cut through the noise with practical guides and honest recommendations. We test, compare, and explain—so you can choose confidently.</p>
-    </section>
-
-    <section id="contact" class="prose">
-      <h2>Contact</h2>
-      <p>Questions or suggestions? Email us at <a href="mailto:contact@truepicks.example">contact@truepicks.example</a>.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 TruePicks. Built with GitHub Pages.</p>
-    </div>
+  <footer>
+    <p>© 2025 TruePicks. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
