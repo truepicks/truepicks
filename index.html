@@ -3,225 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TruePicks - Smart Picks for You</title>
-  <meta name="description" content="TruePicks brings you the best product recommendations, reviews, and informative articles all in one place.">
+  <title>TruePicks - Top Picks, Every Time</title>
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f4f6f9;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
       color: #333;
     }
-    a { text-decoration: none; }
-
-    /* Header */
     header {
-      background: #2c3e50;
-      color: #fff;
+      background: #2d6cdf;
+      color: white;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     header h1 {
-      font-size: 28px;
+      margin: 0;
+      font-size: 24px;
     }
     nav a {
-      color: #fff;
+      color: white;
+      text-decoration: none;
       margin-left: 20px;
-      font-weight: 500;
-    }
-    nav a:hover { text-decoration: underline; }
-
-    /* Hero */
-    .hero {
-      background: url('https://source.unsplash.com/1600x600/?technology,gadgets') no-repeat center/cover;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    .hero h2 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    }
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
-    .hero a {
-      background: #e67e22;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 5px;
       font-weight: bold;
     }
-    .hero a:hover { background: #d35400; }
-
-    /* Section */
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?technology,shopping') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff6600;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+    }
     section {
+      padding: 60px 40px;
       max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: auto;
     }
     section h2 {
-      margin-bottom: 20px;
-      font-size: 28px;
-      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
     }
-
-    /* Features Grid */
-    .features {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .card {
-      background: #fff;
-      padding: 20px;
+      border: 1px solid #ddd;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s;
+      background: #fff;
+      transition: transform 0.2s;
     }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+    .card:hover { transform: translateY(-5px); }
     .card img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
-    .card h3 {
-      margin-bottom: 10px;
-      color: #34495e;
+    .card-content {
+      padding: 15px;
     }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #2980b9;
-      font-weight: bold;
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 20px;
     }
-
-    /* Blog Section */
-    .blog {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-    }
-    .blog-post {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .blog-post h3 {
-      margin-bottom: 10px;
-      color: #2c3e50;
-    }
-    .blog-post p {
-      margin-bottom: 10px;
-    }
-    .blog-post a {
-      color: #e67e22;
-      font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      background: #2c3e50;
-      color: #fff;
+    .newsletter {
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
+      background: #f7f7f7;
+      padding: 40px 20px;
+      border-radius: 10px;
     }
-    footer .social a {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 18px;
+    .newsletter input {
+      padding: 12px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      padding: 12px 25px;
+      background: #2d6cdf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a {
+      color: #ff6600;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <h1>TruePicks</h1>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Reviews</a>
-      <a href="#">Blog</a>
-      <a href="#">Deals</a>
+      <a href="#">Products</a>
+      <a href="#">Articles</a>
       <a href="#">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <div class="hero">
-    <h2>Smart Picks • Honest Reviews</h2>
-    <p>Discover the best gadgets, tools & lifestyle products handpicked for you.</p>
-    <a href="#">Explore Now</a>
+    <h2>Top Picks, Every Time</h2>
+    <p>Your guide to the best products and insights</p>
+    <a href="#products" class="btn">Explore Now</a>
   </div>
 
-  <!-- Features Section -->
-  <section>
-    <h2>Top Recommendations</h2>
-    <div class="features">
+  <section id="products">
+    <h2>Featured Affiliate Picks</h2>
+    <div class="grid">
       <div class="card">
-        <img src="https://source.unsplash.com/400x250/?earbuds" alt="Wireless Earbuds">
-        <h3>Wireless Earbuds</h3>
-        <p>High-quality sound and comfort for your daily routine.</p>
-        <a href="#">Shop Now →</a>
+        <img src="https://source.unsplash.com/400x300/?headphones" alt="Product">
+        <div class="card-content">
+          <h3>Best Headphones 2025</h3>
+          <p>Crystal clear sound and comfort for all-day use.</p>
+          <a class="btn" href="#">Buy on Amazon</a>
+        </div>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/400x250/?smartwatch" alt="Smartwatch">
-        <h3>Smart Watch</h3>
-        <p>Track your fitness, calls and notifications on the go.</p>
-        <a href="#">Shop Now →</a>
+        <img src="https://source.unsplash.com/400x300/?laptop" alt="Product">
+        <div class="card-content">
+          <h3>Top Laptop Deals</h3>
+          <p>Performance and style at unbeatable prices.</p>
+          <a class="btn" href="#">Shop Now</a>
+        </div>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/400x250/?laptop,desk" alt="Laptop Stand">
-        <h3>Laptop Stand</h3>
-        <p>Work smarter with ergonomic design and comfort.</p>
-        <a href="#">Shop Now →</a>
+        <img src="https://source.unsplash.com/400x300/?smartwatch" alt="Product">
+        <div class="card-content">
+          <h3>Smartwatches</h3>
+          <p>Track fitness and stay connected on the go.</p>
+          <a class="btn" href="#">Check Price</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section>
+  <section id="articles">
     <h2>Latest Articles</h2>
-    <div class="blog">
-      <div class="blog-post">
-        <h3>5 Gadgets That Save Your Time</h3>
-        <p>We explored gadgets that really improve daily life. Here are our picks!</p>
-        <a href="#">Read More →</a>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?health,tech" alt="Article">
+        <div class="card-content">
+          <h3>How to Choose the Right Gadget</h3>
+          <p>Tips to help you make smart purchase decisions.</p>
+          <a class="btn" href="#">Read More</a>
+        </div>
       </div>
-      <div class="blog-post">
-        <h3>How to Choose the Perfect Smartwatch</h3>
-        <p>Confused which smartwatch to buy? This guide covers everything.</p>
-        <a href="#">Read More →</a>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?shopping,online" alt="Article">
+        <div class="card-content">
+          <h3>Top 5 Online Shopping Hacks</h3>
+          <p>Save money and time while shopping online.</p>
+          <a class="btn" href="#">Read More</a>
+        </div>
       </div>
-      <div class="blog-post">
-        <h3>Best Work From Home Essentials</h3>
-        <p>Check out must-have products that boost your productivity.</p>
-        <a href="#">Read More →</a>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x300/?future,technology" alt="Article">
+        <div class="card-content">
+          <h3>Future of Tech in 2025</h3>
+          <p>Trends shaping tomorrow’s innovations.</p>
+          <a class="btn" href="#">Read More</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section class="newsletter">
+    <h2>Subscribe for Updates</h2>
+    <p>Get the latest picks and articles directly in your inbox.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
   <footer>
-    <p>© 2025 TruePicks. All Rights Reserved.</p>
-    <div class="social">
-      <a href="#">Facebook</a> | 
-      <a href="#">Twitter</a> | 
-      <a href="#">Instagram</a>
-    </div>
+    <p>© 2025 TruePicks. All Rights Reserved. | <a href="#">Affiliate Disclosure</a></p>
   </footer>
 </body>
 </html>
