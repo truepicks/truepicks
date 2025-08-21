@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://truepicks.github.io/sitemap.xml
